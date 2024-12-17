@@ -80,8 +80,8 @@ function elegir(eleccion) {
             }
             break;
         }
-    jugada.porcentajeVictorias = Math.floor(jugada.ganadas / jugada.partidasJugadas * 100);
     jugada.partidasJugadas += 1;
+    jugada.porcentajeVictorias = Math.floor(jugada.ganadas / jugada.partidasJugadas * 100);
     localStorage.setItem("jugada", JSON.stringify(jugada));
     estadisticas();
     guardarHistorial(eleccion, maquina, ganador);   
